@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Biosorb project | Ошибка активации{% endblock %}
+
+{% comment %}
+**registration/activate.html**
+
+Used if account activation fails. With the default setup, has the following context:
+
+``activation_key``
+    The activation key used during the activation attempt.
+{% endcomment %}
+
+{% block content %}
+
+    <div id="wrapper" style="width: 400px">
+        <h1>Ошибка активации учётной записи</h1>
+        <p>К сожалению, Ваша учётная запись не может быть активирована. Попробуйте пройти регистрацию ещё раз или <a href="mailto:elringus@yandex.ru">обратитесь к системному администратору</a>.</p>
+        <p>Приносим извинения за доставленные неудобства.</p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "registration/email.txt" %}
+
+{% block body %}
+Вы получили это сообщение, так как Ваш e-mail адрес был использован при регистрации нового пользователя на сайте biosorb-game.com (Biosorb project).
+Для подтверждения регистрации перейдите по следующей ссылке:
+http://{{ site.domain }}{% url registration_activate activation_key %}
+{% endblock %}

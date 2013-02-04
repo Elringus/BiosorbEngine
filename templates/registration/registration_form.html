@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Biosorb project | Регистрация{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <form action="" method="POST" class="account">{% csrf_token %}
+            <table>
+                <caption><h1>Регистрация новой учётной записи</h1><p>Для регистрации новой учётной записи, пожалуйста, заполните приведённые ниже поля и нажмите кнопку "Создать учётную запись".</p></caption>
+                {{ form.as_table }}
+            </table>
+            <br>
+            <input type="submit" name="submit" value="Создать учётную запись" class="button">
+        </form>
+    </div>
+
+{% endblock %}

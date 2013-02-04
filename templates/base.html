@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="Biosorb project" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="/static/css/base.css" />
+        <link type="text/css" rel="stylesheet" href="/static/css/font-awesome.css">
+        {% block css %}{% endblock %}
+        <script src="/static/js/jquery.js"></script>
+        <script>
+            $(function() {
+                var temp = '';
+                var active = document.activeElement;
+                $('[placeholder]').focus(function () {
+                    if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+                        $(this).val('').removeClass('hasPlaceholder');
+                        temp = $(this).attr('placeholder');
+                        $(this).attr('placeholder', '');
+                    }
+                }).blur(function () {
+                    if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder')) ||
+                          temp != ''  && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                        if (temp != '') { $(this).attr('placeholder', temp); temp = '' }
+                        $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+                    }
+                 });
+                $('[placeholder]').blur();
+                $(active).focus();
+            });
+        </script>
+        {% block script %}{% endblock %}
+    </head>
+    <body>
+    {% block content %}{% endblock %}
+    </body>
+</html>

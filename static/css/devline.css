@@ -1,0 +1,494 @@
+#ie {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    left: 10px;
+    visibility: hidden;
+    margin: 0 auto;
+    width: 500px;
+    text-align: left;
+    padding: 10px;
+    background: #161616;
+    opacity: 0.85;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 1px #a7a7a7;
+}
+
+#nav {
+    z-index: 100;
+    background: #3f3f3f;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 5px 1px #353535;
+    border-bottom: solid 1px #f9f9f9;
+
+    color: #cccccc;
+    text-align: right;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#loading {
+    display: none;
+    position: fixed;
+    top: 3px;
+    left: 10px;
+    color: #cccccc;
+    z-index: 102;
+}
+
+.lastPost {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    color: #cccccc;
+    overflow: hidden;
+    display: none;
+    width: 40%;
+    height: 20px;
+    font-size: 80%;
+    font-family: Courier New, Courier New, monospace;
+    cursor: pointer;
+    z-index: 102;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.lastPost:hover {
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #f9f9f9;
+}
+
+#devline {
+    background: rgb(200,112,39);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M4NzAyNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZTQ4MDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(200,112,39,1) 0%, rgba(158,72,1,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(200,112,39,1)), color-stop(100%,rgba(158,72,1,1)));
+    background: -webkit-linear-gradient(top,  rgba(200,112,39,1) 0%,rgba(158,72,1,1) 100%);
+    background: -o-linear-gradient(top,  rgba(200,112,39,1) 0%,rgba(158,72,1,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(200,112,39,1) 0%,rgba(158,72,1,1) 100%);
+    background: linear-gradient(to bottom,  rgba(200,112,39,1) 0%,rgba(158,72,1,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c87027', endColorstr='#9e4801',GradientType=0 );
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 0 5px 1px #4a4a4a;
+    color: #ffffff;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* removing default styling of the progress bar
+------------------------------------------------------------------------------------------------------->
+*/
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /* gets rid of default border in Firefox and Opera. */
+    border: none;
+
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+
+    /* Dimensions */
+    margin-bottom: 3px;
+    width: 200px;
+    height: 8px;
+
+    -webkit-transition-property: border, box-shadow;
+    -moz-transition-property: border, box-shadow;
+    -o-transition-property: border, box-shadow;
+    -ms-transition-property: border, box-shadow;
+    transition-property: border, box-shadow;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+    cursor: help;
+}
+
+/* Polyfill */
+progress[role]:after {
+    background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+    display: none;
+}
+
+progress:hover,
+progress[role]:hover {
+    border: solid 1px #f9f9f9;
+    box-shadow: 0 0 8px 1px #f38021;
+}
+
+/* background
+------------------------------------------------------------------------------------------------------->
+*/
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+    background: #cccccc !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #cccccc;
+}
+
+/* bar
+------------------------------------------------------------------------------------------------------->
+*/
+
+/* IE10 */
+progress {
+    color: #f38021;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+    background: #f38021;
+
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #f38021;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: #f38021;
+}
+
+div.ver {
+    display: inline-block;
+    float: left;
+    width: 25px;
+    height: 90px;
+    opacity: 0.7;
+    margin-left: 5px;
+    margin-top: -10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #cccccc;
+    text-align: center;
+
+    background: #3f3f3f;
+    box-shadow: 0 0 5px 1px #353535;
+    border-radius: 5px;
+    cursor: pointer;
+
+    -webkit-transition-property: box-shadow, opacity, height;
+    -moz-transition-property: box-shadow, opacity, height;
+    -ms-transition-property: box-shadow, opacity, height;
+    -o-transition-property: box-shadow, opacity, height;
+    transition-property: box-shadow, opacity, height;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+div.ver:hover {
+    opacity: 0.9 !important;
+    height: 100px !important;
+    box-shadow: 0 0 8px 1px #353535 !important;
+}
+
+div.metaver {
+    display: inline-block;
+    float: right;
+    width: 25px;
+    height: 90px;
+    opacity: 0.7;
+    margin-right: 5px;
+    margin-top: -10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #cccccc;
+    text-align: center;
+
+    background: #3f3f3f;
+    box-shadow: 0 0 5px 1px #353535;
+    border-radius: 5px;
+    cursor: pointer;
+
+    -webkit-transition-property: box-shadow, opacity, height;
+    -moz-transition-property: box-shadow, opacity, height;
+    -ms-transition-property: box-shadow, opacity, height;
+    -o-transition-property: box-shadow, opacity, height;
+    transition-property: box-shadow, opacity, height;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+div.metaver:hover {
+    opacity: 0.9 !important;
+    height: 100px !important;
+    box-shadow: 0 0 8px 1px #353535 !important;
+}
+
+span.verspan {
+    font-family: Trebuchet MS, Trebuchet MS, sans-serif;
+    display: none;
+    margin-top: 65px;
+
+    color: #cccccc;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+}
+
+span.curspan {
+    margin-top: 10px;
+    display: none;
+}
+
+table.vertable {
+    margin: auto;
+    display: none;
+}
+
+div.dev {
+    display: none;
+    margin: 5px auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 60%;
+    float: left;
+    min-width: 500px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px 1px #a7a7a7;
+    border: solid 1px #a7a7a7;
+}
+
+div.dev h1, div.dev p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p.change {
+    color: #888888;
+    cursor: pointer;
+
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+p.change:hover {
+    color: #f38021;
+    text-shadow: 0 0 15px #a7a7a7;
+}
+
+p.changeCompl {
+    cursor: pointer;
+
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+p.changeCompl:hover {
+    color: #f38021;
+    text-shadow: 0 0 15px #a7a7a7;
+}
+
+p.comment {
+    font-style: italic;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+div.chat {
+    position: fixed;
+    right: 8px;
+    margin-top: 120px;
+    float: right;
+    width: 39%;
+    min-width: 300px;
+    height: 500px;
+    background: #3f3f3f;
+    box-shadow: 0 0 5px 1px #a7a7a7;
+    border: solid 1px #f9f9f9;
+    resize: vertical;
+}
+
+#users {
+    display: none;
+    position: fixed;
+    width: auto;
+    top: 35px;
+    left: 10px;
+    z-index: 15000;
+    cursor: all-scroll;
+    opacity: 0.75;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#holdScroll {
+    display: none;
+    position: fixed;
+    top: 175px;
+    right: 35px;
+    cursor: help;
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #f9f9f9;
+}
+
+#holdRing {
+    display: none;
+    position: fixed;
+    top: 155px;
+    right: 35px;
+    cursor: help;
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #f9f9f9;
+}
+
+div.chat p {
+    color: #cccccc;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.chatControl {
+    position: relative;
+    top: 10px;
+}
+
+textarea.chat {
+    width: 99%;
+    min-width: 200px;
+}
+
+#messages {
+    height: 490px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+#sendMessage {
+    width: 100%;
+    min-width: 120px;
+}
+
+span.info {
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #f9f9f9;
+    cursor: help;
+}
+
+#disScroll {
+    width: 30px;
+}
+
+#disRing {
+    width: 30px;
+}
+
+#showUsers {
+    width: 30px;
+}
+
+div.objcont {
+    display: none;
+    margin-left: 15px;
+}
+
+.change_title {
+    margin-left: 15px;
+    cursor: pointer;
+
+    -webkit-transition-property: color, text-shadow;
+    -moz-transition-property: color, text-shadow;
+    -ms-transition-property: color, text-shadow;
+    -o-transition-property: color, text-shadow;
+    transition-property: color, text-shadow;
+
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.change_title:hover {
+    color: #f38021;
+    text-shadow: 0 0 15px #a7a7a7;
+}

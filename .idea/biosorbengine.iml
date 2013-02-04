@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="google-appengine-python" name="Google App Engine (Python)">
+      <configuration>
+        <option name="rootFolder" value="C:\Users\Elringus\PycharmProjects\biosorbengine" />
+        <option name="sdkFolder" value="C:\Program Files (x86)\Google\google_appengine" />
+        <option name="templatesFolder" value="" />
+        <option name="email" value="elringus@yandex.ru" />
+        <option name="gp" value="dfcddfc5dfc5dfcddfc6dfcfdf8fdfe1dfeddf9bdf93df93df9adf8b" />
+      </configuration>
+    </facet>
+    <facet type="django" name="Django">
+      <configuration>
+        <option name="rootFolder" value="$MODULE_DIR$" />
+        <option name="settingsModule" value="settings.py" />
+        <option name="manageScript" value="manage.py" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Google App Engine SDK" level="project" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="C:\Users\Elringus\PycharmProjects\biosorbengine\templates" />
+      </list>
+    </option>
+  </component>
+</module>
+

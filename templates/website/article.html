@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block title %}Biosorb project | {{ article.title }}{% endblock %}
+
+{% block homeactive %}onclick="window.location = '/';"{% endblock %}
+{% block aboutactive %}onclick="window.location = '/about';"{% endblock %}
+{% block conactactive %}onclick="window.location = '/contacts';"{% endblock %}
+
+{% block indexcontent %}
+
+        <div class="articleblock">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.unescaped_text }}</p>
+        </div>
+
+{% endblock %}

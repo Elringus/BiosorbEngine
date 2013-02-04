@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block title %}Palema project | Контакты{% endblock %}
+
+{% block homeactive %}onclick="window.location = '/';"{% endblock %}
+{% block aboutactive %}onclick="window.location = '/about';"{% endblock %}
+{% block conactactive %}style="color: #efefef; cursor: default;"{% endblock %}
+
+{% block indexcontent %}
+
+    <div class="articleblock" style="width: 550px;">
+        <h1>Форма обратной связи</h1>
+        <p>Вы можете связаться с нами заполнив данную форму. Пожалуйста, не забудьте ввести ваш e-mail, чтобы мы смогли вам ответить.</p><br>
+        <form action="/contacts/" method="post" style="width: 500px; margin: auto;">{% csrf_token %}
+            <h1>Тема сообщения:</h1>
+            <input id="id_subject" type="text" name="subject" maxlength="100" style="width: 496px; background-color: #efefef;"/>
+            <h1 style="margin-bottom: 3px;">Текст сообщения:</h1>
+            <textarea rows="5" cols="40" name="message" id="id_message" style="width: 500px; background-color: #efefef;"></textarea><br>
+            <h1 style="margin-top: 5px;">Ваш e-mail:</h1>
+            <input type="text" name="sender" id="id_sender" style="width: 496px; background-color: #efefef;"/><br>
+            <input type="submit" value="Отправить сообщение" class="button" style="width: 505px;"/><br>
+        </form>
+    </div>
+
+{% endblock %}

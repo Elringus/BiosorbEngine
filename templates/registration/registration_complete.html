@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Biosorb project | Успешная регистрация{% endblock %}
+
+{% comment %}
+**registration/registration_complete.html**
+
+Used after successful completion of the registration form. This
+template has no context variables of its own, and should simply inform
+the user that an email containing account-activation information has
+been sent.
+{% endcomment %}
+
+{% block content %}
+
+    <div id="wrapper" style="width: 400px">
+        <h1>Регистрация успешно завершена!</h1>
+        <p>На указанный Вами e-mail было отправлено письмо. Пожалуйста, перейдите по представленной там ссылке для активации учётной записи.</p>
+    </div>
+
+{% endblock %}
