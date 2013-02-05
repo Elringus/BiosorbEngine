@@ -23,7 +23,7 @@ def add_score(request):
     userID = int(request.POST.get('userID'))
     user = User.objects.get(pk=userID)
     playerProfile = user.get_profile()
-    playerProfile.score += 2
+    playerProfile.score += 1
     playerProfile.save()
 
 
