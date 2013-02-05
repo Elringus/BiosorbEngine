@@ -14,8 +14,8 @@ urlpatterns = patterns('',
     #url(r'^contacts/$', 'website.views.contact'),
 
     url(r'^game/auth', 'game.views.auth'),
-    url(r'^game/get_scorelist', 'game.views.get_scorelist'),
-    url(r'^game/add_score', 'game.views.add_score'),
+    url(r'^game/get_playerlist', 'game.views.get_playerlist'),
+    url(r'^game/up_level', 'game.views.up_level'),
 
     url(r'^admin/', include(admin.site.urls)),
     (r'^accounts/', include('registration.backends.default.urls')),

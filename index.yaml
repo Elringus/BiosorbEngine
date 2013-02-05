@@ -22,12 +22,12 @@ indexes:
   - name: __key__
     direction: desc
 
-- kind: registration_registrationprofile
+- kind: game_player
   properties:
   - name: __key__
     direction: desc
 
-- kind: website_userprofile
+- kind: registration_registrationprofile
   properties:
   - name: __key__
     direction: desc

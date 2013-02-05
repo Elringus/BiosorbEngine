@@ -17,6 +17,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
+    #'django.contrib.messages',
     'djangotoolbox',
     'autoload',
     'dbindexer',
@@ -25,6 +26,7 @@ INSTALLED_APPS = (
     'registration',
 
     'website',
+    'game',
 
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
@@ -35,8 +37,13 @@ MIDDLEWARE_CLASSES = (
     'autoload.middleware.AutoloadMiddleware',
 
     'django.middleware.common.CommonMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.transaction.TransactionMiddleware',
+    #'django.middleware.locale.LocaleMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'django.contrib.messages.middleware.MessageMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -53,7 +60,7 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ACCOUNT_ACTIVATION_DAYS = 7
-AUTH_PROFILE_MODULE = 'website.UserProfile'
+#AUTH_PROFILE_MODULE = 'website.UserProfile'
 DEFAULT_FROM_EMAIL = 'elringus@gmail.com'
 LOGIN_REDIRECT_URL = '/'
 

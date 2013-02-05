@@ -10,5 +10,11 @@ dbindexer
 autoload
 mediagenerator
 filetransfers
+whoosh
+haystack
+pagination
+django_messages
+postmarkup
+PIL
 
 build
